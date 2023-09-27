@@ -7,11 +7,9 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class DeveloperData implements ApplicationRunner {
 
-    // Denne klasse er jeres legeplads. Vi bruger den til at lave de første øvelser
-    // og til at teste ting af inden vi putter dem over i et "rigtigt projekt"
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        System.out.println("I was Called!");
+        System.out.println("Hello from run");
     }
 }
