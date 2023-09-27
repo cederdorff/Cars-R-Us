@@ -33,5 +33,5 @@ public class DeveloperData implements ApplicationRunner {
         carRepository.save(new Car("Hyundai", "Kona Electric", 449.69, 82));
         carRepository.save(new Car("Kia", "Niro EV", 359.55, 76));
         carRepository.save(new Car("Volkswagen", "ID.4", 529.82, 94));    
-    }
+}
 }
