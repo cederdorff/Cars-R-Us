@@ -1,14 +1,14 @@
 package ita3.car.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Car {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     @Column(name= "car_brand", nullable = false, length = 50)
     private String brand;
 
@@ -21,4 +21,12 @@ public class Car {
     @Column(name="max_discount")
     private int bestDiscount;
 
+    public Car() {}
+
+    public Car(String brand, String model, double pricePrDay, int bestDiscount) {
+        this.brand = brand;
+        this.model = model;
+        this.pricePrDay = pricePrDay;
+        this.bestDiscount = bestDiscount;
+    }
 }
